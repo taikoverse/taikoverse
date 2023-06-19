@@ -230,7 +230,7 @@ export function registerInventory() {
           </ConnectedPlayersContainer>
           <ActionBarWrapper>{[...range(INVENTORY_WIDTH)].map((i) => Slots[i])}</ActionBarWrapper>
           <LogoContainer>
-            <PixelatedImage src="/img/opcraft-dark.png" width={150} />
+            <PixelatedImage src="/img/opcraft-dark.png" width={200} />
           </LogoContainer>
           {notification && (
             <NotificationWrapper>
