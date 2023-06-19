@@ -77,10 +77,16 @@ export const Balance: React.FC<{
     window.open(TWITTER_URL + text);
   }
 
+  const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+
   async function requestDrip() {
     if (!faucet || !username) return;
     const usernameAddressPair = { username, address };
     setStatus(ActionState.Executing);
+    console.log("current defore", new Date().toLocaleTimeString());
+    await delay(10000);
+    console.log("current after", new Date().toLocaleTimeString());
+    console.log("Waited 10s since twitter v2 has 10s delay");
     try {
       if (locked) {
         await faucet.drip(usernameAddressPair);
