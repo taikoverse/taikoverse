@@ -29,35 +29,18 @@ let createNoaLayer = createNoaLayerImport;
 let registerUIComponents = registerUIComponentsImport;
 let Engine = EngineImport;
 
-// const defaultParams = {
-//   chainId: "4242",
-//   worldAddress: "0xc1c15CCE34E16684d36B0F76B9fa4f74b3a279f4",
-//   rpc: "https://follower.testnet-chain.linfra.xyz",
-//   wsRpc: "wss://follower.testnet-chain.linfra.xyz",
-//   initialBlockNumber: "1443526",
-//   snapshot: "https://ecs-snapshot.testnet-mud-services.linfra.xyz",
-//   stream: "https://ecs-stream.testnet-mud-services.linfra.xyz",
-//   relay: "https://ecs-relay.testnet-mud-services.linfra.xyz",
-//   faucet: "https://faucet.testnet-mud-services.linfra.xyz",
-//   blockTime: "1000",
-//   blockExplorer: "https://explorer.testnet-chain.linfra.xyz",
-//   dev: "false",
-// };
-
 const defaultParams = {
-  chainId: "31337",
-  worldAddress: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  chainId: "1670051",
+  worldAddress: "0xB581C9264f59BF0289fA76D61B2D0746dCE3C30D",
   rpc: "https://degen-chain.taikoverse.xyz",
-  wsRpc: "wss://degen-chain.taikoverse.xyz",
-  // rpc: "http://43.201.193.48:8545",
-  // wsRpc: "ws://43.201.193.48:8545",
+  wsRpc: "wss://degen-chain-ws.taikoverse.xyz",
   initialBlockNumber: "1",
   snapshot: "https://snapshot.taikoverse.xyz",
   stream: "https://stream.taikoverse.xyz",
   relay: "https://relay.taikoverse.xyz",
   faucet: "https://faucet.taikoverse.xyz",
   blockTime: "1000",
-  blockExplorer: "https://explorer.testnet-chain.linfra.xyz",
+  blockExplorer: "https://explorer.taikoverse.xyz",
   dev: "false",
 };
 

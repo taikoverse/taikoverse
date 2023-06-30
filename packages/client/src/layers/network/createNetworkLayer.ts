@@ -125,21 +125,21 @@ export async function createNetworkLayer(config: GameConfig) {
 
   // Set initial component values
   if (components.PluginRegistry.entities.length === 0) {
-    addPluginRegistry("https://opcraft-plugins.mud.dev");
+    addPluginRegistry("https://plugin.taikoverse.xyz");
   }
 
-  // Enable chat plugin by default
-  if (
-    getEntitiesWithValue(components.Plugin, { host: "https://opcraft-plugins.mud.dev", path: "/chat.js" }).size === 0
-  ) {
-    console.info("Enabling chat plugin by default");
-    addPlugin({
-      host: "https://opcraft-plugins.mud.dev",
-      path: "/chat.js",
-      active: true,
-      source: "https://github.com/latticexyz/opcraft-plugins",
-    });
-  }
+  // // Enable chat plugin by default
+  // if (
+  //   getEntitiesWithValue(components.Plugin, { host: "https://plugin.taikoverse.xyz", path: "/chat.js" }).size === 0
+  // ) {
+  //   console.info("Enabling chat plugin by default");
+  //   addPlugin({
+  //     host: "https://plugin.taikoverse.xyz",
+  //     path: "/chat.js",
+  //     active: true,
+  //     source: "https://github.com/taikoverse/taikoverse-plugins",
+  //   });
+  // }
 
   // --- ACTION SYSTEM --------------------------------------------------------------
   const actions = createActionSystem<{
