@@ -31,10 +31,10 @@ let Engine = EngineImport;
 
 const defaultParams = {
   chainId: "1670051",
-  worldAddress: "0xB581C9264f59BF0289fA76D61B2D0746dCE3C30D",
+  worldAddress: "0x4CCcFd9454F9f5380BAB35DB21Aa8779786972fF",
   rpc: "https://degen-chain.taikoverse.xyz",
   wsRpc: "wss://degen-chain-ws.taikoverse.xyz",
-  initialBlockNumber: "1",
+  initialBlockNumber: "14330",
   snapshot: "https://snapshot.taikoverse.xyz",
   stream: "https://stream.taikoverse.xyz",
   relay: "https://relay.taikoverse.xyz",
