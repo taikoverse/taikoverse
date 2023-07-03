@@ -34,7 +34,7 @@ const defaultParams = {
   worldAddress: "0x4CCcFd9454F9f5380BAB35DB21Aa8779786972fF",
   rpc: "https://degen-chain.taikoverse.xyz",
   wsRpc: "wss://degen-chain-ws.taikoverse.xyz",
-  initialBlockNumber: "14330",
+  initialBlockNumber: "680",
   snapshot: "https://snapshot.taikoverse.xyz",
   stream: "https://stream.taikoverse.xyz",
   relay: "https://relay.taikoverse.xyz",
