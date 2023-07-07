@@ -15,7 +15,7 @@ contract NameSystem is System {
     (uint256 entity, string memory name) = abi.decode(arguments, (uint256, string));
 
     // Name system can only be called by name oracle
-    require(msg.sender == 0x27C41B2D2368085EF6fe7Dd66Cf32EB01e0e0658, "ONLY_ORACLE");
+    require(msg.sender == 0xCbf09d5a6333ACAB33546D45a125EDA912A6d9C1, "ONLY_ORACLE");
 
     NameComponent nameComponent = NameComponent(getAddressById(components, NameComponentID));
     nameComponent.set(entity, name);
