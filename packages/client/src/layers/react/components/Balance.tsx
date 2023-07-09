@@ -8,7 +8,7 @@ import { ActionState } from "@latticexyz/std-client";
 import { ActionStatusIcon } from "./Action";
 import { Observable } from "rxjs";
 
-const DEFAULT_TEXT = "Play taikoverse https://bit.ly/3VCVYyt @taikoversehq @taikoxyz\n\n";
+const DEFAULT_TEXT = "Play minecraft on Taiko @taikoversehq https://linktr.ee/taikoverse\n";
 const TWITTER_URL = "https://twitter.com/intent/tweet?text=";
 const SIGNATURE_TEXT = (handle: string, address: string) => `${handle} tweetooor requesting drip to ${address} address`;
 
@@ -83,9 +83,7 @@ export const Balance: React.FC<{
     if (!faucet || !username) return;
     const usernameAddressPair = { username, address };
     setStatus(ActionState.Executing);
-    console.log("current defore", new Date().toLocaleTimeString());
     await delay(10000);
-    console.log("current after", new Date().toLocaleTimeString());
     console.log("Waited 10s since twitter v2 has 10s delay");
     try {
       if (locked) {
