@@ -31,10 +31,10 @@ let Engine = EngineImport;
 
 const defaultParams = {
   chainId: "1670051",
-  worldAddress: "0x4CCcFd9454F9f5380BAB35DB21Aa8779786972fF",
+  worldAddress: "0xB4c97768aA67AdB7a9192A60117d06EDD95565b4",
   rpc: "https://degen-chain.taikoverse.xyz",
   wsRpc: "wss://degen-chain-ws.taikoverse.xyz",
-  initialBlockNumber: "680",
+  initialBlockNumber: "228175",
   snapshot: "https://snapshot.taikoverse.xyz",
   stream: "https://stream.taikoverse.xyz",
   relay: "https://relay.taikoverse.xyz",
@@ -43,7 +43,6 @@ const defaultParams = {
   blockExplorer: "https://explorer.taikoverse.xyz",
   dev: "false",
 };
-
 
 export const ecs = {
   setComponent,
