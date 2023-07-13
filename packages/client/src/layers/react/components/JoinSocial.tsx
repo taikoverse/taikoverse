@@ -9,7 +9,7 @@ export const JoinSocial: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         <Gold>Join the community!</Gold>
       </p>
       <Buttons>
-        <Button onClick={() => window.open("https://discord.gg/mAyG2NaA", "blank")}>Discord</Button>
+        <Button onClick={() => window.open("https://discord.gg/QJDNcQSv3D", "blank")}>Discord</Button>
         <Button onClick={() => window.open("https://twitter.com/taikoversehq", "blank")}>Twitter</Button>
       </Buttons>
     </SocialContainer>
