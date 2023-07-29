@@ -5,7 +5,8 @@ import { SKY_COLOR } from "../setup/constants";
 /*
  * Setups clouds in a hacky way
  */
-const CLOUD_HEIGHT = 90.5;
+const CLOUD_HEIGHT = 200;
+// const CLOUD_HEIGHT = 90.5;
 const SKY_HEIGHT = 40;
 
 export function setupClouds(noa: Engine) {
@@ -93,8 +94,8 @@ export function setupClouds(noa: Engine) {
   noa.rendering.addMeshToScene(s, false);
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const [playerX, , playerZ] = noa.ents.getPositionData(noa.playerEntity)!.position!;
-  const cloudCenter = [playerX, playerZ];
+  const [playerX, _, playerZ] = noa.ents.getPositionData(noa.playerEntity)!.position!;
+  const cloudCenter = [0, 0];
   let currentRadian = 0;
 
   const update = () => {
@@ -104,21 +105,17 @@ export function setupClouds(noa: Engine) {
       cloudCenter[0] + Math.sin(wrappedRadian) * 100,
       cloudCenter[1] + Math.cos(wrappedRadian) * 100,
     ];
-    currentRadian += 0.0001;
-    const [x, y, z] = noa.globalToLocal([cloudPosition[0], CLOUD_HEIGHT, cloudPosition[1]], [0, 0, 0], local);
+    currentRadian += 0.001;
+    // const [x, y, z] = noa.globalToLocal([cloudPosition[0], CLOUD_HEIGHT, cloudPosition[1]], [0, 0, 0], local);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const [currentPlayerX, , currentPlayerZ] = noa.ents.getPositionData(noa.playerEntity)!.position!;
+    const [currentPlayerX, currentPlayerY, currentPlayerZ] = noa.ents.getPositionData(noa.playerEntity)!.position!;
+    const [x, y, z] = noa.globalToLocal(
+      [cloudPosition[0] + currentPlayerX, CLOUD_HEIGHT, cloudPosition[1] + currentPlayerZ],
+      [0, 0, 0],
+      local
+    );
+
     s.position.copyFromFloats(x, y, z);
-    // move clouds towards player
-    const diffX = currentPlayerX - cloudCenter[0];
-    const diffZ = currentPlayerZ - cloudCenter[1];
-    const distance = Math.sqrt(diffX ** 2 + diffZ ** 2);
-    const speedVector = [
-      0.00001 * Math.sign(diffX) * Math.sqrt(distance),
-      0.00001 * Math.sign(diffZ) * Math.sqrt(distance),
-    ];
-    cloudCenter[0] += speedVector[0];
-    cloudCenter[1] += speedVector[1];
   };
 
   noa.on("beforeRender", update);
