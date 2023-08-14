@@ -21,7 +21,7 @@ import { Sounds } from "./Sounds";
 
 // This gives us 36 inventory slots. As of now there are 34 types of items, so it should fit.
 const INVENTORY_WIDTH = 9;
-const INVENTORY_HEIGHT = 5;
+const INVENTORY_HEIGHT = 6;
 
 export function registerInventory() {
   registerUIComponent(
